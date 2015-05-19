@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  form#translator(action='/translate', method='post')
+    div.form-group
+      span translate
+      input#translate-word(type='text', class='form-control' name='text', placeholder='word to translate')
+    div.form-group
+      span from
+      select.form-control#from
+        option English
+          //- |   
+          option Spanish
+          //- |   
+          option French
+          //- |   
+          //- option 4
+          //- |   
+          //- option 5
+
+    div.form-group
+      span to
+      select.form-control#to
+        option Spanish
+          //- |   
+          option French
+          //- |   
+          option English
+          //- |   
+          //- option German
+          //- |   
+          //- option Russian
+    div.form-group
+      button#translate-submit(type='submit') translate
+  h2#result
